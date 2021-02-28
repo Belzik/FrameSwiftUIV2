@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    
+    // MARK: - Properties
+    
+    @Binding var selection: Int
+    @Binding var isOpenInfoCard: Bool
+    
+    // MARK: - Body
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            selection = 1
+            isOpenInfoCard = true
+        }) {
+            Text("To open a second Tab")
+        }
     }
-}
-
-struct HomeScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeScreen()
-    }
+    
 }

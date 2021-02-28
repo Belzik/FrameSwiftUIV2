@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct MoreScreen: View {
+    
+    // MARK: - Properties
+    
+    @State var showCredits: Bool = false
+    
+    // MARK: - Body
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            showCredits.toggle()
+        }) {
+            Text("Version 1.0.0")
+        }
+        .sheet(isPresented: $showCredits, content: {
+            Text("Made by Me")
+                .font(.largeTitle)
+        })
     }
-}
-
-struct MoreScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        MoreScreen()
-    }
+    
 }
