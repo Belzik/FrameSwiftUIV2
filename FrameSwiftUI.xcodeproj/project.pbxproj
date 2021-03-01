@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B53206A725ECCEB00031ABCF /* FrameSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53206A625ECCEB00031ABCF /* FrameSwiftUI.swift */; };
+		B53206A725ECCEB00031ABCF /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53206A625ECCEB00031ABCF /* ContentViewModel.swift */; };
 		B53206B425ECD3010031ABCF /* CardScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53206B325ECD3010031ABCF /* CardScreenViewModel.swift */; };
 		B53206B925ECD31F0031ABCF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53206B825ECD31F0031ABCF /* Card.swift */; };
 		B53206BD25ECD3BA0031ABCF /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53206BC25ECD3BA0031ABCF /* HomeScreenViewModel.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B53206A625ECCEB00031ABCF /* FrameSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameSwiftUI.swift; sourceTree = "<group>"; };
+		B53206A625ECCEB00031ABCF /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		B53206B325ECD3010031ABCF /* CardScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScreenViewModel.swift; sourceTree = "<group>"; };
 		B53206B825ECD31F0031ABCF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B53206BC25ECD3BA0031ABCF /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B5C6789F25EB854700F9372B /* ContentView.swift */,
-				B53206A625ECCEB00031ABCF /* FrameSwiftUI.swift */,
+				B53206A625ECCEB00031ABCF /* ContentViewModel.swift */,
 				B5C6789D25EB854700F9372B /* FrameSwiftUIApp.swift */,
 				B53206A925ECD2900031ABCF /* Flows */,
 				B5C678B825EBA01D00F9372B /* Resources */,
@@ -254,7 +254,7 @@
 				B5C678AF25EB991800F9372B /* HomeScreen.swift in Sources */,
 				B5C678B525EB995100F9372B /* MoreScreen.swift in Sources */,
 				B5C678B225EB993B00F9372B /* CardsScreen.swift in Sources */,
-				B53206A725ECCEB00031ABCF /* FrameSwiftUI.swift in Sources */,
+				B53206A725ECCEB00031ABCF /* ContentViewModel.swift in Sources */,
 				B53206B925ECD31F0031ABCF /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

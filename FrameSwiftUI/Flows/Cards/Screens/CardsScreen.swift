@@ -9,8 +9,7 @@ import SwiftUI
 
 struct CardsScreen: View {
     
-    @ObservedObject var viewModel: CardScreenViewModel = .init()
-    @ObservedObject var frameSwiftUI: FrameSwiftUI
+    @ObservedObject var viewModel: CardScreenViewModel
     
     // MARK: - Body
     
@@ -22,7 +21,7 @@ struct CardsScreen: View {
                 }
                 
                 NavigationLink(destination: CardView(image: viewModel.cards[0].image),
-                               isActive: $frameSwiftUI.isOpenElement) {
+                               isActive: $viewModel.isOpenElement) {
                     Text("")
                 }.hidden()
             }

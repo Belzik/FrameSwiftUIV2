@@ -1,5 +1,5 @@
 //
-//  FrameSwiftUI.swift
+//  ContentViewModel.swift
 //  FrameSwiftUI
 //
 //  Created by Александр Катрыч on 01.03.2021.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class FrameSwiftUI: ObservableObject {
+final class ContentViewModel: ObservableObject {
     
     // MARK: - Properties
     

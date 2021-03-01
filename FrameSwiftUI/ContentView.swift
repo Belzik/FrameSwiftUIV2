@@ -11,19 +11,19 @@ struct ContentView: View {
     
     // MARK: - Properties
     
-    @ObservedObject var frameSwiftUI: FrameSwiftUI
+    @ObservedObject var viewModel: ContentViewModel = .init()
     
     // MARK: - Body
     
     var body: some View {
-        TabView(selection: $frameSwiftUI.selection) {
-            HomeScreen(viewModel: HomeScreenViewModel(startToSecondTabAndOpenElement: frameSwiftUI.toSecondTabAndOpenElement))
+        TabView(selection: $viewModel.selection) {
+            HomeScreen(viewModel: HomeScreenViewModel(startToSecondTabAndOpenElement: viewModel.toSecondTabAndOpenElement))
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
                 .tag(0)
-            CardsScreen(frameSwiftUI: frameSwiftUI)
+            CardsScreen(viewModel: CardScreenViewModel(isOpenElement: $viewModel.isOpenElement))
                 .tabItem {
                     Image(systemName: "greetingcard")
                     Text("Cards")
@@ -43,6 +43,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(frameSwiftUI: FrameSwiftUI())
+        ContentView()
     }
 }

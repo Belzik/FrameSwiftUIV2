@@ -10,15 +10,11 @@ import SwiftUI
 @main
 struct FrameSwiftUIApp: App {
     
-    // MARK: - Properties
-    
-    let frameSwiftUI: FrameSwiftUI = .init()
-    
     // MARK: - Body
     
     var body: some Scene {
         WindowGroup {
-            ContentView(frameSwiftUI: frameSwiftUI)
+            ContentView()
         }
     }
     
