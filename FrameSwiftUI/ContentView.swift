@@ -11,20 +11,19 @@ struct ContentView: View {
     
     // MARK: - Properties
     
-    @State private var selection: Int = 1
-    @State private var isOpenInfoCard: Bool = false
+    @ObservedObject var frameSwiftUI: FrameSwiftUI
     
     // MARK: - Body
     
     var body: some View {
-        TabView(selection: $selection) {
-            HomeScreen(selection: $selection, isOpenInfoCard: $isOpenInfoCard)
+        TabView(selection: $frameSwiftUI.selection) {
+            HomeScreen(viewModel: HomeScreenViewModel(startToSecondTapAndOpenElement: frameSwiftUI.toSecondTabAndOpenElement))
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
                 .tag(0)
-            CardsScreen(isOpenInfoCard: $isOpenInfoCard)
+            CardsScreen(frameSwiftUI: frameSwiftUI)
                 .tabItem {
                     Image(systemName: "greetingcard")
                     Text("Cards")
@@ -44,6 +43,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(frameSwiftUI: FrameSwiftUI())
     }
 }

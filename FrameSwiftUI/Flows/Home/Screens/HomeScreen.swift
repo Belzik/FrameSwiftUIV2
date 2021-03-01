@@ -11,15 +11,13 @@ struct HomeScreen: View {
     
     // MARK: - Properties
     
-    @Binding var selection: Int
-    @Binding var isOpenInfoCard: Bool
+    let viewModel: HomeScreenViewModelProtocol
     
     // MARK: - Body
     
     var body: some View {
         Button(action: {
-            selection = 1
-            isOpenInfoCard = true
+            viewModel.toSecondTapAndOpenElement()
         }) {
             Text("To open a second Tab")
         }

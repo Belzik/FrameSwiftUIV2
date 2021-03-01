@@ -7,34 +7,10 @@
 
 import SwiftUI
 
-struct Card {
-    let name: String
-    let image: Image
-}
-
-extension Card: Identifiable {
-    var id: String {
-        return name
-    }
-}
-
-final class CardScreenViewModel: ObservableObject {
-    
-    // MARK: - Properties
-    
-    @Published private(set) var cards = [
-        Card(name: "Spades", image: Image("spades")),
-        Card(name: "Clubs", image: Image("clubs")),
-        Card(name: "Diamonds", image: Image("diamonds")),
-        Card(name: "Hearts", image: Image("hearts"))
-    ]
-    
-}
-
 struct CardsScreen: View {
     
     @ObservedObject var viewModel: CardScreenViewModel = .init()
-    @Binding var isOpenInfoCard: Bool
+    @ObservedObject var frameSwiftUI: FrameSwiftUI
     
     // MARK: - Body
     
@@ -44,14 +20,17 @@ struct CardsScreen: View {
                 ForEach(viewModel.cards) { item in
                     CardListCell(card: item)
                 }
+                
                 NavigationLink(destination: CardView(image: viewModel.cards[0].image),
-                               isActive: $isOpenInfoCard) {
+                               isActive: $frameSwiftUI.isOpenElement) {
                     Text("")
                 }.hidden()
             }
             .navigationBarTitle(Text("Cards"),
                                 displayMode: .inline)
+            
         }
+
     }
     
 }
