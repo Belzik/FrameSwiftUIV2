@@ -17,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $frameSwiftUI.selection) {
-            HomeScreen(viewModel: HomeScreenViewModel(startToSecondTapAndOpenElement: frameSwiftUI.toSecondTabAndOpenElement))
+            HomeScreen(viewModel: HomeScreenViewModel(startToSecondTabAndOpenElement: frameSwiftUI.toSecondTabAndOpenElement))
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")

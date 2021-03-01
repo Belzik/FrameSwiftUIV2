@@ -17,7 +17,7 @@ struct HomeScreen: View {
     
     var body: some View {
         Button(action: {
-            viewModel.toSecondTapAndOpenElement()
+            viewModel.toSecondTabAndOpenElement()
         }) {
             Text("To open a second Tab")
         }

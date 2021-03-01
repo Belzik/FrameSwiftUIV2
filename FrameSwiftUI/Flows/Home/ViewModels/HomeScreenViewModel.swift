@@ -8,27 +8,27 @@
 import Foundation
 
 protocol HomeScreenViewModelProtocol {
-    func toSecondTapAndOpenElement()
+    func toSecondTabAndOpenElement()
 }
 
 final class HomeScreenViewModel {
     
     // MARK: - Properties
     
-    private let startToSecondTapAndOpenElement: () -> Void
+    private let startToSecondTabAndOpenElement: () -> Void
     
     // MARK: - Object life cycle
     
-    init(startToSecondTapAndOpenElement: @escaping () -> Void) {
-      self.startToSecondTapAndOpenElement = startToSecondTapAndOpenElement
+    init(startToSecondTabAndOpenElement: @escaping () -> Void) {
+      self.startToSecondTabAndOpenElement = startToSecondTabAndOpenElement
     }
     
 }
 
 extension HomeScreenViewModel: HomeScreenViewModelProtocol {
     
-    func toSecondTapAndOpenElement() {
-        startToSecondTapAndOpenElement()
+    func toSecondTabAndOpenElement() {
+        startToSecondTabAndOpenElement()
     }
     
 }
