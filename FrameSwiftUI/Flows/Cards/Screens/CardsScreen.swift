@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CardsScreen: View {
     
+    // MARK: - Properties
+    
     @ObservedObject var viewModel: CardScreenViewModel
     
     // MARK: - Body
@@ -27,7 +29,6 @@ struct CardsScreen: View {
             }
             .navigationBarTitle(Text("Cards"),
                                 displayMode: .inline)
-            
         }
 
     }

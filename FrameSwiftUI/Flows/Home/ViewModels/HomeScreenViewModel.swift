@@ -25,10 +25,10 @@ final class HomeScreenViewModel {
     
 }
 
+// MARK: - HomeScreenViewModelProtocol
+ 
 extension HomeScreenViewModel: HomeScreenViewModelProtocol {
-    
     func toSecondTabAndOpenElement() {
         startToSecondTabAndOpenElement()
     }
-    
 }

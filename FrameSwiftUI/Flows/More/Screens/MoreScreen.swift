@@ -11,20 +11,25 @@ struct MoreScreen: View {
     
     // MARK: - Properties
     
+    @State var sliderValue: Double = 0.5
     @State var showCredits: Bool = false
     
     // MARK: - Body
     
     var body: some View {
-        Button(action: {
-            showCredits.toggle()
-        }) {
-            Text("Version 1.0.0")
+        VStack {
+            ColorSlider(value: $sliderValue, textColor: .red)
+            Button(action: {
+                showCredits.toggle()
+            }) {
+                Text("Version 1.0.0")
+            }
+            .sheet(isPresented: $showCredits, content: {
+                Text("Made by Me")
+                    .font(.largeTitle)
+            })
         }
-        .sheet(isPresented: $showCredits, content: {
-            Text("Made by Me")
-                .font(.largeTitle)
-        })
+
     }
     
 }
